@@ -1,0 +1,151 @@
+Hello! I bet you're here from the Basic Vim 202. Happy to have you.
+
+The core of this file is based off of a sample git interactive-rebase prompt,
+which I bet is the most frequently used and familiar context for editing a file
+in Vim for developers working solely with the product via an IDE. Hopefully,
+there should be syntax highlighting on here by default. If not, no big deal.
+
+In addition to the sample interactive-rebase prompt, I've added some exercises
+below, along with some of the content from the slides. Good luck!
+
+If you've enjoyed some of these exercises, I would check out vimtutor,
+which you can invoke as a command in the terminal. These exercises are heavily
+inspired by its format, but is structured in such a way to match the slide set.
+
+--------------------------------------------------------------------------------
+
+Get comfortable jumping between the beginning and end of the file with gg and G
+
+--------------------------------------------------------------------------------
+
+Get groovy jumping between the start and end of lines with 0 and $
+
+--------------------------------------------------------------------------------
+
+Press i to enter [i]nsert mode, type some text out, and exit with the <Esc> key
+
+--------------------------------------------------------------------------------
+
+Think about [I]nserting at the front of the line, and
+            [A]ppending to the end of the line.
+Complete the incomplete sentence below by adding "To" to the front, and "question" at the end:
+
+be, or not to be, that is the
+
+--------------------------------------------------------------------------------
+
+Create a new line with some text below(o) and above(O) this one
+
+--------------------------------------------------------------------------------
+
+Try undoing with u, and redoing with Ctrl + r
+
+--------------------------------------------------------------------------------
+
+Therre aree too manny characters on thiss liine. Remmove thhem with x
+
+--------------------------------------------------------------------------------
+
+Riplace one off spalling errors by prassing r on the mistake, and then the character to replace the mistake with
+
+--------------------------------------------------------------------------------
+
+Rearrange the following commits using dd and p/P (paste below and above, respectively)
+
+pick a1c629a This is commit 1
+pick a1c629a This is commit 7
+pick 1136680 This is commit 2
+pick a1c629a This is commit 4
+pick 1136680 This is commit 3
+pick 1136680 This is commit 6
+pick 1136680 This is commit 5
+
+--------------------------------------------------------------------------------
+
+The complete aphorism is ackchyually "A jack of all trades is a master of none, but oftentimes better than a master of one."
+Use D to delete from the cursor to the end of the line, to delete the last part of the sentence to the saying we now know today,
+"A jack of all trades is a master of none"
+
+A jack of all trades is a master of none, but oftentimes better than a master of one
+
+--------------------------------------------------------------------------------
+
+Use C to delete from the cursor to the end of the line and enter insert mode.
+Lower John's debt to five tacos with C:
+
+John owes me five million billion dollars
+
+--------------------------------------------------------------------------------
+
+Use vim motions, specifically ciw, to change the first "pick" to "e" to edit the commit
+                                   to change the second "pick" to "r" to reword the commit
+                                   to change the third "pick" to "s" to squash the commit
+
+pick 7ea6525 QWERTY-1234: A kid pressed a button... You won't BELIEVE what happened next...
+pick a1c629a WIP
+pick 1136680 fixup! WIP
+
+Remember, ciw for "change in word"
+Note that you can use ciw anywhere the cursor is on the word you want to change,
+which makes it more useful than going to the start of a word, then doing cw
+
+--------------------------------------------------------------------------------
+
+Change every fixup commit from "pick" to f, and use the repeat (.) command
+
+pick a1c629a WIP
+pick 1136680 fixup! WIP
+pick b9e7c9f fixup! fixup! WIP
+pick 30e5e95 fixup! fixup! fixup! WIP
+
+--------------------------------------------------------------------------------
+
+Order the commits in this interactive-rebase prompt such that
+* all ASDF and QWERTY commits are grouped together
+  * Use V (capital v) where it will make your life easier
+* the "pick"s of a fixup commit are changed to "f" or "fixup"
+* the "pick" of the WIP commit is "r" or "reword" to edit the commit message
+
+pick 8683188 ASDF-7890: I love coobernettis
+pick 0e7bea2 ASDF-7890: It is both improbable and veritably futile to verify indubitably
+pick 4f93882 QWERTY-1234: Implementing biological API
+pick bb0b931 ASDF-7890: that that which is seen is seen and that which is heard is heard
+pick a1998b9 QWERTY-1234: Doctors HATE him... He IS 60 but LOOKS 20
+pick bf62186 QWERTY-1234: ¯\_(ツ)_/¯
+pick 032629b QWERTY-1234: I love the Marvel Cinematic Universe™ (MCU)
+pick 614cc6d QWERTY-1234: 🐶 🙈
+pick 8dd084f ASDF-7890: How to Find and Stop the Workplace Snitch
+pick 5530e40 ASDF-7890: Find out how he lost 60 pounds in a month with one simple trick...
+pick 7ea6525 QWERTY-1234: He thought it was a simple meeting... and then THIS happened
+pick a1c629a WIP
+pick 1136680 fixup! WIP
+pick b9e7c9f fixup! fixup! WIP
+pick 30e5e95 fixup! fixup! fixup! WIP
+
+# Rebase 0fdda40..516cb9e onto e540a40 (15 commands)
+#
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+
+--------------------------------------------------------------------------------
+
+You're at the final exercise for search and replacing text.
+
+Try searching for text with /SEARCHQUERY<Enter>
+Press n to go to the [n]ext match and N to go the previous match
+
+Try replacing all instances of pick to drop in this file with :%s/pick/drop/g
